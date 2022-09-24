@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block titulo %}
+borrar blog
+{% endblock titulo %}
+
+
+{% block content %}
+{% include 'includes/header.html' %}
+<div class="grid-container">
+    <h3 class="cell">Eliminar blog</h3>
+
+    <div class="grid-x grid-padding-x">
+
+        <form class="cell" method="post">{% csrf_token %}
+            <h5 class="callout">confirme que desea eliminar el blog</h5>
+            <button class="submit success button" type="submit">
+                Confirmar
+            </button>
+        </form>
+
+    </div>
+
+</div>
+
+
+{% endblock content %}

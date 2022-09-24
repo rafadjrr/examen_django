@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block titulo %}
+Modificar blog
+{% endblock titulo %}
+
+
+{% block content %}
+{% include 'includes/header.html' %}
+
+<h3>modificar blog</h3>
+<div class="grid-container">
+    <div class="grid-x grid-padding-x">
+
+        <form class="cell" method="post">{% csrf_token %}
+            {{form.as_p}}
+            <button class="submit success button" type="submit" [disabled]="!form.form.valid">
+                Save
+            </button>
+        </form>
+
+    </div>
+
+</div>
+{% endblock content %}
