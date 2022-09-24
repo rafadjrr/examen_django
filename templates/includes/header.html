@@ -1,0 +1,19 @@
+<header>
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <ul class="dropdown menu" data-dropdown-menu>
+                <li class="menu-text">GIT blogger</li>
+                <li>
+                    <a href="{% url 'urls_blog:blog_all' %}">Listar blogs</a>
+                </li>
+                <li><a href="{% url 'urls_blog:author_all' %}">Authors</a></li>
+            </ul>
+        </div>
+        <div class="top-bar-right">
+            <ul class="menu">
+                <li><input type="search" placeholder="Buscar author"></li>
+                <li><button type="button" class="button">Registrar nuevo</button></li>
+            </ul>
+        </div>
+    </div>
+</header>
